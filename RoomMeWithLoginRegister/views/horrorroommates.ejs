@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+.header {
+  padding: 60px;
+  text-align: center;
+  background: green;
+  color: black;
+  font-size: 30px;
+}
+.header a:link {
+	text-decoration: none;
+	color: black;
+}
+.header a:visited {
+	text-decoration: none;
+	color: black;
+}
+nav ul {
+	margin: 0;
+	padding: 0%;
+	list-style: none;
+}
+nav li {
+	display: inline-block;
+	margin-left: 70px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+nav a {
+	color: white;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: black;
+}
+.navBar {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  display: block;
+}
+a:visited {
+  color:white;
+  text-decoration: none;
+}
+input[type=text] {
+  padding: 6px;
+  border: none;
+  font-size: 17px;
+}
+.centered {
+  margin: auto;
+  width: 15%;
+  padding: 0px;
+  padding-top: 25px;
+}
+.bordered {
+  border: 3px solid black;
+}
+.results {
+  display: grid;
+  grid-template-columns: 325px 325px 325px 325px;
+  gap: 45px;
+  margin-top: 45px;
+  justify-content: center;
+}
+</style>
+<html>
+	<head>
+		<title>RoomMe - GMU Dorms</title>
+	</head>
+	<body style="background-color:#1b1b1b">
+		<div class="header">
+			<h1>RoomMe</h1>
+		</div>
+		<nav class="navBar">
+			<ul>
+				<li><a href="profile">Profile</a></li>
+				<li><a href="dashboard">Dorms</a></li>
+				<li><a href="roommates">Roommates</a></li>
+			</ul>
+		</nav>
+        <div >
+          <h2 style = 'color:white;padding-bottom: 5%; '>All RoomMe Profiles Interested in Horror</h1>  
+          <% if (users.length > 0) { %>                
+            <% users.forEach(user => { %>
+                <% if (user.horror) { %>
+                  <h3 style = 'color:white'>Username:</h3>
+                  <h4 style = 'color:grey'><%= user.username %></h4>
+                  <h3 style = 'color:white'>Gender:</h3>
+                  <h4 style = 'color:grey'><%= user.male || user.female%></h4>
+                  <h3 style = 'color:white'>Bio:</h3>
+                  <h4 style = 'color:grey'><%= user.bio%></h4> 
+                  <h3 style = 'color:white'>Contact Info:</h3>
+                  <h4 style = 'color:grey'><%= user.email%></h4>
+                  <h3 style = 'color:white'>Interests:</h3>
+                  <h4 style = 'color:grey'><%= user.gaming%></h4>
+                  <h4 style = 'color:grey'><%= user.organized%></h4>
+                  <h4 style = 'color:grey'><%= user.party%></h4>
+                  <h4 style = 'color:grey'><%= user.Cooking%></h4>
+                  <h4 style = 'color:grey'><%= user.gym%></h4>
+                  <h4 style = 'color:grey'><%= user.anime%></h4>
+                  <h4 style = 'color:grey'><%= user.horror%></h4>
+                  <h4 style = 'color:grey'><%= user.comedy%></h4>
+                  <h4 style = 'color:grey; padding-bottom: 5%;'><%= user.mn %></h4>
+                <% } %>
+
+            <% }) %>   
+
+        <% } else { %>
+            <h2>No profiles available</h2>   
+        <% } %>     
+    
+        </div> 
+	</body>
+</html>

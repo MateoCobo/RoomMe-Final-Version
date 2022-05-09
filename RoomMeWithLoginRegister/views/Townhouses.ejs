@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+.header {
+  padding: 60px;
+  text-align: center;
+  background: green;
+  color: black;
+  font-size: 30px;
+
+} 
+.header a:link {
+	text-decoration: none;
+	color: black;
+}
+.header a:visited {
+	text-decoration: none;
+	color: black;
+}
+nav ul {
+	margin: 0;
+	padding: 0%;
+	list-style: none;
+}
+nav li {
+	display: inline-block;
+	margin-left: 70px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+nav a {
+	color: white;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: black;
+}
+.navBar {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  display: block;
+}
+a:visited {
+  color:white;
+  text-decoration: none;
+}
+.centered {
+  margin: auto;
+  text-align:center;
+  padding: 0px;
+  font-size: 120px;
+  color:white;
+}
+.FP
+{
+  font-size: 50px;
+  color:white;
+  text-align:center;
+}
+.bordered {
+  border: 3px solid black;
+}
+.center
+{
+  color:white;
+  text-align:center;
+  font-size: 24px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+  margin:auto;
+  color:white;
+  background-color: #000000;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #1b1b1b;
+}
+.include
+{
+  color:white;
+  font-size: 24px;
+  margin:auto;
+  text-align:center;
+}
+</style>
+<html>
+	<head>
+		<title>RoomMe - Townhouses</title>
+	</head>
+	<body style="background-color:#1b1b1b">
+		<div class="header">
+			<h1>RoomMe</h1>
+		</div>
+		<nav class="navBar">
+			<ul>
+				<li><a href="profile">Profile</a></li>
+				<li><a href="dashboard">Dorms</a></li>
+				<li><a href="roommates">Roommates</a></li>
+			</ul>
+		</nav>
+
+		<div class="centered">
+			<p>Townhouses</p>
+		</div>
+		<div class="include">
+			<ul>
+				<li>Each unit accomodates four students. The units are comprised of two double bedrooms housing two students each.</li>
+  				<li>Includes washer and dryer, kitchen with an oven, fridge, dishwasher, garbage disposal, microwave, and sink.</li>
+				<li>Includes living room.</li>
+				<li>Wifi provided, ethernet ready.</li>
+  				<li>There's shared bathrooms.</li>
+  				<li>Dresser, chair, desk, closet, and bed included in each room.</li>
+			</ul> 
+		</div>
+		<div class="FP">
+			<p>Floor Plans:</p>
+			<a href="https://housingplans.gmu.edu/apartments/Townhouses/TownHouses.html"><img src="/images/thFP.png" width="1082" height="466" class="bordered"></a>
+		</div>
+		<div class="center">
+			<p>Link to floor plans for Townhouses <a href="https://housingplans.gmu.edu/apartments/Townhouses/TownHouses.html">here!</a>
+		</div>
+		<div class="FP">
+			<p>Pictures:</p>
+			<img src="/images/thP1.jpg" width="960" height="540" class="bordered">
+		</div>
+		<div class="FP">
+			<p>Pricing:</p>
+		</div>
+		<table>
+			<tr>
+				<th>Room Type</th>
+				<th>Semester Rate/Bed</th>
+				<th>Annual Rate/Bed</th>
+			</tr> 
+			<tr>
+				<td>Single(for grads)</td>
+				<td>$6,125</td>
+				<td>$12,250</td>
+			</tr>
+			<tr>
+				<td>Double</td>
+				<td>$4,900</td>
+				<td>$9,800</td>
+			</tr>
+		</table>
+		<script src="search.js"></script>
+	</body>
+</html>

@@ -1,0 +1,121 @@
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+      <h1 class="text-center mb-3">
+        <i class="fas fa-user-plus"></i> Register
+      </h1>
+      <% include ./partials/messages %>
+      <form action="/users/register" method="POST">
+        <div class="form-group">
+          <label for="fname">First Name</label>
+          <input
+            type="fname"
+            id="fname"
+            name="fname"
+            class="form-control"
+            placeholder="Enter First Name"
+            value="<%= typeof fname != 'undefined' ? fname : '' %>"
+          />
+        </div>  
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input
+              type="lname"
+              id="lname"
+              name="lname"
+              class="form-control"
+              placeholder="Enter Last Name"
+              value="<%= typeof lname != 'undefined' ? lname : '' %>"
+            />
+        </div>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input
+            type="username"
+            id="username"
+            name="username"
+            class="form-control"
+            placeholder="Enter Username"
+            value="<%= typeof username != 'undefined' ? username : '' %>"
+          />
+      </div>
+      <div class="form-group">
+        <label for="bio">Bio</label>
+        <input
+          type="bio"
+          id="bio"
+          name="bio"
+          class="form-control"
+          placeholder="Enter Bio"
+          value="<%= typeof bio != 'undefined' ? bio : '' %>"
+        />
+      </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-control"
+            placeholder="Enter Email"
+            value="<%= typeof email != 'undefined' ? email : '' %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="form-control"
+            placeholder="Create Password"
+            value="<%= typeof password != 'undefined' ? password : '' %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password2">Confirm Password</label>
+          <input
+            type="password"
+            id="password2"
+            name="password2"
+            class="form-control"
+            placeholder="Confirm Password"
+            value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+          />
+        </div>
+        <div class = "form-group">
+          <label for="gender">Gender:</label><br>
+				  <input type="radio" id="male" name="male" value="Male">
+				  <label style="font-size:11pt;" for="male"> Male</label><br>
+				  <input type="radio" id="female" name="female" value="female">
+				  <label style="font-size:11pt;" for="female"> Female</label><br><br>
+        </div>
+        <div class = "form-group">
+          <label for="interests">Interests:</label><br>
+          <input type="checkbox" id="gaming" name="gaming" value="Gaming">
+          <label style="font-size:11pt;" for="gaming"> Gaming</label><br>
+          <input type="checkbox" id="organized" name="organized" value="Organized">
+          <label style="font-size:11pt;" for="organized"> Organization</label><br>
+          <input type="checkbox" id="party" name="party" value="Party">
+          <label style="font-size:11pt;" for="party"> Partying</label><br>
+          <input type="checkbox" id="Cooking" name="Cooking" value="Cooking">
+          <label style="font-size:11pt;" for="Cooking"> Cooking</label><br>
+          <input type="checkbox" id="gym" name="gym" value="Gym">
+          <label style="font-size:11pt;" for="gym"> Working Out</label><br>
+          <input type="checkbox" id="anime" name="anime" value="Anime">
+          <label style="font-size:11pt;" for="anime"> Anime</label><br>
+          <input type="checkbox" id="horror" name="horror" value="Horror">
+          <label style="font-size:11pt;" for="horror"> Horror</label><br>
+          <input type="checkbox" id="comedy" name="comedy" value="Comedy">
+          <label style="font-size:11pt;" for="comedy"> Comedy</label><br>
+          <input type="checkbox" id="mn" name="mn" value="Movie Nights">
+          <label style="font-size:11pt;" for="mn"> Movie Nights</label><br><br>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          Register
+        </button>
+      </form>
+      <p class="lead mt-4">Have An Account? <a href="/users/login">Login</a></p>
+    </div>
+  </div>
+</div>

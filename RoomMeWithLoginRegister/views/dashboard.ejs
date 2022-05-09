@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+.header {
+  padding: 60px;
+  text-align: center;
+  background: green;
+  color: black;
+  font-size: 30px;
+}
+.header a:link {
+	text-decoration: none;
+	color: black;
+}
+.header a:visited {
+	text-decoration: none;
+	color: black;
+}
+nav ul {
+	margin: 0;
+	padding: 0%;
+	list-style: none;
+}
+nav li {
+	display: inline-block;
+	margin-left: 70px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+nav a {
+	color: white;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: black;
+}
+.navBar {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  display: block;
+}
+a:visited {
+  color:white;
+  text-decoration: none;
+}
+input[type=text] {
+  padding: 6px;
+  border: none;
+  font-size: 17px;
+}
+.centered {
+  margin: auto;
+  width: 15%;
+  padding: 0px;
+  padding-top: 25px;
+}
+.bordered {
+  border: 3px solid black;
+}
+.results {
+  display: grid;
+  grid-template-columns: 325px 325px 325px 325px;
+  gap: 45px;
+  margin-top: 45px;
+  justify-content: center;
+}
+.filters
+{
+  color:white;
+  text-align:center;
+  font-size: 35px;
+}
+</style>
+<html>
+	<head>
+		<title>RoomMe - GMU Dorms</title>
+	</head>
+	<body style="background-color:#1b1b1b">
+		<div class="header">
+			<h1>RoomMe</h1>
+			<p class="lead mb-3">Welcome <%= user.fname %></p>
+			<a href="/users/logout" class="btn btn-secondary">Logout</a>
+		</div>
+		<nav class="navBar">
+			<ul>
+				<li><a href="profile">Profile</a></li>
+				<li><a href="dashboard">Dorms</a></li>
+				<li><a href="roommates">Roommates</a></li>
+			</ul>
+		</nav>
+
+		<div class="centered">
+			<input type="text" placeholder="Search..." id="searchBar">
+		</div>
+		
+		<div class="filters">
+			<br><label for="area">Housing Area:&emsp;</label>
+			<input type="checkbox" id="commons" name="commons" value="The Commons">
+			<label style="font-size:20pt;" for="commons"> The Commons&emsp;</label>
+			<input type="checkbox" id="presidents" name="presidents" value="Presidents Park">
+			<label style="font-size:20pt;" for="presidents"> Presidents Park;</label><br>
+		</div>
+		
+		<div class="results">
+			<div id="commonwealth"><a href="Commonwealth"><img src="/images/common.png" width="325" class="bordered"></a></div>
+			<div id="dominion"><a href="Dominion"><img src="/images/dom.png" width="325" class="bordered"></a></div>
+			<div id="piedmont"><a href="Piedmont"><img src="/images/pied.png" width="325" class="bordered"></a></div>
+			<div id="tidewater"><a href="Tidewater"><img src="/images/tide.png" width="325" class="bordered"></a></div>
+			<div id="blue ridge"><a href="BlueRidge"><img src="/images/blue.png" width="325" class="bordered"></a></div>
+			<div id="sandbridge"><a href="Sandbridge"><img src="/images/sand.png" width="325" class="bordered"></a></div>
+			<div id="amherst"><a href="Amherst"><img src="/images/amh.png" width="325" class="bordered"></a></div>
+			<div id="brunswick"><a href="Brunswick"><img src="/images/bruns.png" width="325" class="bordered"></a></div>
+			<div id="essex"><a href="Essex"><img src="/images/ess.png" width="325" class="bordered"></a></div>
+			<div id="dickenson"><a href="Dickenson"><img src="/images/dick.png" width="325" class="bordered"></a></div>
+			<div id="carroll"><a href="Carroll"><img src="/images/carr.png" width="325" class="bordered"></a></div>
+			<div id="franklin"><a href="Franklin"><img src="/images/frank.png" width="325" class="bordered"></a></div>
+			<div id="grayson"><a href="Grayson"><img src="/images/gray.png" width="325" class="bordered"></a></div>
+			<div id="adams"><a href="Adams"><img src="/images/adm.png" width="325" class="bordered"></a></div>
+			<div id="harrison"><a href="Harrison"><img src="/images/harry.png" width="325" class="bordered"></a></div>
+			<div id="jackson"><a href="Jackson"><img src="/images/jack.png" width="325" class="bordered"></a></div>
+			<div id="jefferson"><a href="Jefferson"><img src="/images/jeff.png" width="325" class="bordered"></a></div>
+			<div id="kennedy"><a href="Kennedy"><img src="/images/ken.png" width="325" class="bordered"></a></div>
+			<div id="lincoln"><a href="lincoln"><img src="/images/lin.png" width="325" class="bordered"></a></div>
+			<div id="madison"><a href="Madison"><img src="/images/mad.png" width="325" class="bordered"></a></div>
+			<div id="monroe"><a href="Monroe"><img src="/images/mon.png" width="325" class="bordered"></a></div>
+			<div id="roosevelt"><a href="Roosevelt"><img src="/images/roos.png" width="325" class="bordered"></a></div>
+			<div id="taylor"><a href="Taylor"><img src="/images/tay.png" width="325" class="bordered"></a></div>
+			<div id="truman"><a href="Truman"><img src="/images/true.png" width="325" class="bordered"></a></div>
+			<div id="washington"><a href="Washington"><img src="/images/wash.png" width="325" class="bordered"></a></div>
+			<div id="wilson"><a href="Wilson"><img src="/images/will.png" width="325" class="bordered"></a></div>
+			<div id="eastern shore"><a href="EasternShore"><img src="/images/east.png" width="325" class="bordered"></a></div>
+			<div id="hampton roads"><a href="HamptonRoads"><img src="/images/hamp.png" width="325" class="bordered"></a></div>
+			<div id="liberty square"><a href="LibertySquare"><img src="/images/lib.png" width="325" class="bordered"></a></div>
+			<div id="northern neck"><a href="NorthernNeck"><img src="/images/north.png" width="325" class="bordered"></a></div>
+			<div id="potomac heights"><a href="potomacHeights"><img src="/images/pHeights.png" width="325" class="bordered"></a></div>
+			<div id="rogers"><a href="Rogers"><img src="/images/rogers.png" width="325" class="bordered"></a></div>
+			<div id="townhouses"><a href="Townhouses"><img src="/images/town.png" width="325" class="bordered"></a></div>
+			<div id="whitetop"><a href="Whitetop"><img src="/images/white.png" width="325" class="bordered"></a></div>
+			<div id="angel cabrera"><a href="AngelCabrera"><img src="/images/ang.png" width="325" class="bordered"></a></div>
+		</div>
+		<script src = "/javascript/search.js">
+		</script>	
+	</body>
+
+</html>
